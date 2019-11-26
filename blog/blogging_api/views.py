@@ -1,3 +1,6 @@
+from django.http import JsonResponse
 from django.shortcuts import render
 
-# Create your views here.
+
+def names(request):
+    return JsonResponse({'names': ['William', 'Rod', 'Grant']})
