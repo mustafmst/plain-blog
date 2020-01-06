@@ -5,9 +5,9 @@
   "author": "Paweł Mstowski <pawel.mstowski@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "parcel index.html",
-    "watch": "parcel watch index.html",
-    "production": "parcel build index.html"
+    "dev": "parcel src/main.js -d dist/static",
+    "watch": "parcel watch src/main.js -d dist/static",
+    "production": "parcel build src/main.js -d dist/static"
   },
   "dependencies": {
     "axios": "^0.19.0",
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@vue/component-compiler-utils": "^3.1.0",
+    "cssnano": "^4.1.10",
     "parcel-bundler": "^1.12.4",
     "vue-template-compiler": "^2.6.11"
   },
