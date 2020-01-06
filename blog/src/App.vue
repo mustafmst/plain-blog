@@ -1,18 +1,25 @@
 <template>
-  <div id="app">
-    <h1>Hello World!!!11</h1>
-    <button @click="SelectWinner()">Select a Winner</button>
-    <p>
-      {{winner}}
-    </p>
+  <div id="app" class="">
+    <Header></Header>
+    <div class="">
+      <h1>Hello World!!!11</h1>
+      <button @click="SelectWinner()">Select a Winner</button>
+      <p>
+        {{winner}}
+      </p>
+    </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios';
+import Header from './comonents/core/Header';
 
 export default {
   name: 'App',
+  components: {
+    Header
+  },
   data() {
     return {
       names: null,
@@ -38,4 +45,10 @@ export default {
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+
+body{
+  font-family: 'Lato', sans-serif;
+}
 </style>
