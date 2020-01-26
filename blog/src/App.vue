@@ -1,13 +1,8 @@
 <template>
-  <div id="app" class="">
-    <Header></Header>
-    <div class="">
-      <h1>Whatsjhfg jhgfjhgfjh up?</h1>
-      <h1>Hello World!!!11</h1>
-      <button @click="SelectWinner()">Select fffff a Winner</button>
-      <p>
-        {{winner}}
-      </p>
+  <div id="app" class="pure-g">
+    <Header></Header> 
+    <div class="content pure-u-1 pure-u-md-3-4">
+      <Home></Home>
     </div>
   </div>
 </template>
@@ -15,38 +10,30 @@
 <script>
 import axios from 'axios';
 import Header from './components/core/Header';
+import Home from './components/pages/Home'
 
 export default {
   name: 'App',
   components: {
-    Header
-  },
-  data() {
-    return {
-      names: null,
-      winner: null
-    };
-  },
-  mounted: function() {
-    this.FetchData();
-  },
-  methods: {
-    FetchData: function() {
-      var app = this;
-      axios.get("/api/blog/").then(res => {
-        app.names = res.data.names;
-      });
-    },
-    SelectWinner: function() {
-      var winner = this.names[Math.floor(Math.random()*this.names.length)];
-      this.winner = winner;
-    }
+    Header,
+    Home
   }
 }
 </script>
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+.content {
+  padding: 1em;
+}
+
+@media (min-width: 48em){
+  .content {
+      padding: 2em 3em 0;
+      margin-left: 25%;
+  }
+}
 
 
 body{
