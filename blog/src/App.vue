@@ -2,6 +2,7 @@
   <div id="app" class="">
     <Header></Header>
     <div class="">
+      <h1>Whats up?</h1>
       <h1>Hello World!!!11</h1>
       <button @click="SelectWinner()">Select a Winner</button>
       <p>
@@ -13,7 +14,7 @@
 
 <script>
 import axios from 'axios';
-import Header from './comonents/core/Header';
+import Header from './components/core/Header';
 
 export default {
   name: 'App',
