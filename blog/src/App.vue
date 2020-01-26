@@ -2,9 +2,9 @@
   <div id="app" class="">
     <Header></Header>
     <div class="">
-      <h1>Whats up?</h1>
+      <h1>Whatsjhfg jhgfjhgfjh up?</h1>
       <h1>Hello World!!!11</h1>
-      <button @click="SelectWinner()">Select a Winner</button>
+      <button @click="SelectWinner()">Select fffff a Winner</button>
       <p>
         {{winner}}
       </p>
