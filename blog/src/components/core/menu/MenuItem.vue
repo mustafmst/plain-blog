@@ -1,11 +1,11 @@
 <template>
-  <li class="pure-menu-item"><a href="#" class="pure-menu-link">~/{{title}}</a></li>
+  <li class="pure-menu-item"><router-link v-bind:to="to" class="pure-menu-link">~/{{title}}</router-link></li>
 </template>
 
 <script>
 export default {
     name: "MenuItem",
-    props: ['title']
+    props: ['title','to']
 }
 </script>
 

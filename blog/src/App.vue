@@ -2,7 +2,7 @@
   <div id="app" class="pure-g">
     <Header></Header> 
     <div class="content pure-u-1 pure-u-lg-3-4">
-      <Home></Home>
+      <router-view></router-view>
     </div>
   </div>
 </template>

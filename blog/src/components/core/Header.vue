@@ -2,8 +2,8 @@
   <div class="header-container pure-u-1 pure-u-lg-1-4">
     <div class="pure-menu menu">
       <ul class="pure-menu-list">
-        <li class="pure-menu-item"><a href="#" class="pure-menu-heading pure-menu-link">/dev/PawełMstowski</a></li>
-        <MenuItem v-for="item in menuItems" v-bind:title="item.title" v-bind:key="item.id"></MenuItem>
+        <li class="pure-menu-item"><router-link to="/" class="pure-menu-heading pure-menu-link">/dev/PawełMstowski</router-link></li>
+        <MenuItem v-for="item in menuItems" v-bind:to="item.to" v-bind:title="item.title" v-bind:key="item.id"></MenuItem>
       </ul>
     </div>
   <div>
@@ -22,11 +22,13 @@ export default {
       menuItems: [
         {
           id: 0,
-          title: "Blog"
+          title: "Blog",
+          to: "/blog"
         },
         {
           id: 1,
-          title: "Info"
+          title: "Info",
+          to: "/info"
         },
       ]
     }
