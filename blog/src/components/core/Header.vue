@@ -1,47 +1,63 @@
 <template>
-  <div class="header-container pure-u-1 pure-u-md-1-4">
-    <div class="blog-header pure-u-1 pure-u-md-1-4">
-    <div class="pure-menu custom-restricted-width">
+  <div class="header-container pure-u-1 pure-u-lg-1-4">
+    <div class="pure-menu menu">
       <ul class="pure-menu-list">
-        <li class="pure-menu-item"><a href="#" class="pure-menu-heading pure-menu-link">Paweł Mstowski Blog</a></li>
-        <li class="pure-menu-item"><a href="#" class="pure-menu-link">News</a></li>
-        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Sports</a></li>
-        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Finance</a></li>
+        <li class="pure-menu-item"><a href="#" class="pure-menu-heading pure-menu-link">/dev/PawełMstowski</a></li>
+        <MenuItem v-for="item in menuItems" v-bind:title="item.title" v-bind:key="item.id"></MenuItem>
       </ul>
-    </div>
     </div>
   <div>
 </template>
 
 <script>
+import MenuItem from './menu/MenuItem'
+
 export default {
-  name: "Header"
+  name: "Header",
+  components: {
+    MenuItem
+  },
+  data() {
+    return {
+      menuItems: [
+        {
+          id: 0,
+          title: "Blog"
+        },
+        {
+          id: 1,
+          title: "Info"
+        },
+      ]
+    }
+  }
 }
 </script>
 
-<style>
+<style lang='scss'>
 
-@media(min-width: 48em){
-  .blog-header {
-    position: fixed
+@media(min-width: 64em){
+  .header-container {
+    position: fixed;
+    border-right: solid 1px #ddd;
+  }
+  .menu {
+    margin-top: 15em;
+    .pure-menu-item {
+      &:hover{
+        background-color: none;
+      }
+    }
   }
 }
 
 .header-container {
-  padding-top: 2em;
-  padding-bottom: 2em;
   height: 100%;
+  text-align: right;
 }
 
 .blog-header {
   border-right: solid 1px #ddd;
   height: 100%;
-}
-
-.custom-restricted-width {
-    /* To limit the menu width to the content of the menu: */
-    display: inline-block;
-    /* Or set the width explicitly: */
-    /* width: 10em; */
 }
 </style>

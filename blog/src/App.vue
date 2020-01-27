@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="pure-g">
     <Header></Header> 
-    <div class="content pure-u-1 pure-u-md-3-4">
+    <div class="content pure-u-1 pure-u-lg-3-4">
       <Home></Home>
     </div>
   </div>
@@ -28,7 +28,7 @@ export default {
   padding: 1em;
 }
 
-@media (min-width: 48em){
+@media (min-width: 64em){
   .content {
       padding: 2em 3em 0;
       margin-left: 25%;
