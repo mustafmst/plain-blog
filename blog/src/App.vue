@@ -21,8 +21,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import "./style/colors.scss";
 
 .content {
   padding: 1em;
@@ -38,5 +39,10 @@ export default {
 
 body{
   font-family: 'Lato', sans-serif;
+  background-color: $background-main-color;
+  color: $font-normal-color;
+  h1{
+    color: $font-accent-color;
+  }
 }
 </style>

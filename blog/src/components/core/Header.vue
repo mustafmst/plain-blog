@@ -37,25 +37,38 @@ export default {
 </script>
 
 <style lang='scss'>
+@import "../../style/colors.scss";
 
 @media(min-width: 64em){
   .header-container {
     position: fixed;
-    border-right: solid 1px #ddd;
+    border-right: solid 1px $accent-color;
   }
   .menu {
     margin-top: 15em;
-    .pure-menu-item {
-      &:hover{
-        background-color: none;
-      }
-    }
   }
 }
 
 .header-container {
   height: 100%;
   text-align: right;
+}
+
+
+.menu {
+  .pure-menu-link {
+    color: $font-normal-color;
+    &:hover{
+      background-color: $accent-color;
+    }
+  }
+  .router-link-exact-active {
+    background-color: $background-main-color;
+    color: $font-accent-color;
+    &:after{
+      content: " $"
+    }
+  }
 }
 
 .blog-header {
