@@ -8,7 +8,6 @@
 </template>
 
 <script>
-import axios from 'axios';
 import Header from './components/core/Header';
 import Home from './components/pages/Home'
 
@@ -38,11 +37,17 @@ export default {
 
 
 body{
-  font-family: 'Lato', sans-serif;
   background-color: $background-main-color;
   color: $font-normal-color;
   h1{
     color: $font-accent-color;
   }
+}
+
+body,
+.pure-g [class *= "pure-u"],
+.pure-g-r [class *= "pure-u"] {
+    /* Set you're content font stack here: */
+    font-family: lato;
 }
 </style>
