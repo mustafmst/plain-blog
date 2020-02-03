@@ -1,9 +1,9 @@
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 
-
-def names(request):
-    return JsonResponse({'names': ['William', 'Rod', 'Grant']})
+from .models import Post
 
 
 def all_posts(request):
-    return JsonResponse({'title': 'aaaaaaaa'})
+    posts = [p.get_short_json() for p in Post.objects.all()]
+    posts.sort(key=lambda x: x['publication_date'], reverse=True)
+    return JsonResponse(posts, safe=False)

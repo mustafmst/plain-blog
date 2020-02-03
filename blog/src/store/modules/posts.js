@@ -1,4 +1,4 @@
-//import Axios from 'axios'
+import Axios from 'axios'
 
 const state = {
     posts: []
@@ -9,8 +9,8 @@ const getters = {
 }
 
 const actions = {
-    fetchAllPosts({ commit }) {
-        const res = { data: [{ id: 'aaa' }] } //await Axios.get('/api/blog/posts')
+    async fetchAllPosts({ commit }) {
+        const res = await Axios.get('/api/blog/posts')
         commit('setPosts', res.data)
     }
 }
