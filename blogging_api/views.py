@@ -1,6 +1,6 @@
 from django.http import JsonResponse, HttpResponse
 
-from .models import Post
+from blogging_api.models import Post
 
 
 def all_posts(request):
