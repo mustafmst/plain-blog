@@ -21,7 +21,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 @import "./style/colors.scss";
 
 .content {
@@ -48,6 +47,6 @@ body,
 .pure-g [class *= "pure-u"],
 .pure-g-r [class *= "pure-u"] {
     /* Set you're content font stack here: */
-    font-family: lato;
+    font-family: 'lato';
 }
 </style>
