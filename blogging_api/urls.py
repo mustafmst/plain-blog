@@ -1,7 +1,8 @@
 from django.urls import path
 
-from . import views
+from blogging_api.views.post import all_posts, get_post
 
 urlpatterns = [
-    path('posts', views.all_posts)
+    path('posts', all_posts),
+    path('posts/<int:id>', get_post)
 ]
