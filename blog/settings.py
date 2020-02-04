@@ -80,6 +80,7 @@ DATABASES = {
         'ENGINE':  environ.get('DATABASE_ENGINE', 'django.db.backends.sqlite3'),
         'NAME': environ.get('DATABASE_NAME', os.path.join(BASE_DIR, 'db.sqlite3')),
         'USER': environ.get('DATABASE_USER', ''),
+        'PASSWORD': environ.get('DATABASE_PASSWORD', ''),
         'HOST': environ.get('DATABASE_HOST', ''),
         'PORT': environ.get('DATABASE_POST', '')
     }
