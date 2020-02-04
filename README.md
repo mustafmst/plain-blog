@@ -1,6 +1,7 @@
 # Plain Blog
 
 Simple, plain blog webapp written with django and vue.js.
+Using Parcel.js to bundle frontend.
 
 ## Local development setup
 
