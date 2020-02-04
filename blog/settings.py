@@ -26,7 +26,7 @@ SECRET_KEY = environ.get('SECRET_KEY', '2k*14r%m*5mia97#+g^uk*9bi(w!i+4ft_-s@!kj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = environ.get('DEBUG', False)
 
-ALLOWED_HOSTS = environ.get('ALLOWED_HOSTS', [])
+ALLOWED_HOSTS = [host.strip() for host in environ.get('ALLOWED_HOSTS', '').split(',')]
 
 
 # Application definition
