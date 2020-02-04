@@ -16,6 +16,9 @@ Simple, plain blog webapp written with django and vue.js.
 6. For building frontend run `npm run watch` in `frontent` dir
 7. For server run: `python manage.py runserver` in project root dir
 
-## Running localy(Docker)
+## Running localy (Docker)
 
 Just use `docker-compose up` in project root dir.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
