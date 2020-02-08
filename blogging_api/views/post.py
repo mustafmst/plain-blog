@@ -13,4 +13,5 @@ def all_posts(request):
 
 @require_GET
 def get_post(request, id):
-    pass
+    post = Post.objects.get(pk=id).get_json()
+    return JsonResponse(post, safe=False)

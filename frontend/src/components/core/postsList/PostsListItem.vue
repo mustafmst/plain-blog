@@ -1,7 +1,7 @@
 <template>
     <div class="posts-list-item">
         <div class="pure-g">
-            <h3 class=pure-u-3-4>{{post.title}}</h3>
+            <h3 class=pure-u-3-4><router-link v-bind:to="postLink">{{post.title}}</router-link></h3>
             <span class="pure-u-1-4">{{post.publication_date}}</span>
         </div>
         <div class="pure-g">
@@ -15,10 +15,23 @@
 <script>
 export default {
     name: 'PostsListItem',
-    props: ['post']
+    props: ['post'],
+    computed: {
+        postLink: function() {
+            return `/post/${this.post.id}`
+        }
+    }
 }
 </script>
 
-<style lang="sass">
+<style lang="scss">
+@import '../../../style/colors.scss';
 
+a {
+  color:inherit;
+  text-decoration: none;
+  &:hover {
+      color: $font-accent-color;
+  }
+ }
 </style>

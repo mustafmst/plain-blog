@@ -24,3 +24,12 @@ class Post(models.Model):
             'publication_date': self.publication_date,
             'content_short': self.content_short
         }
+
+    def get_json(self):
+        return {
+            'title': self.title,
+            'id': self.pk,
+            'publication_date': self.publication_date,
+            'content': self.content,
+            'content_short': self.content_short
+        }

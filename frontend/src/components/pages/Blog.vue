@@ -6,24 +6,26 @@
 </template>
 
 <script>
-import PostsList from '../core/postsList/PostsList'
+import PostsList from "../core/postsList/PostsList";
 import { mapActions, mapGetters } from "vuex";
 
 export default {
   name: "Blog",
-  components:{
+  components: {
     PostsList
   },
   methods: {
     ...mapActions({
-            fetchAllPosts: 'posts/fetchAllPosts'
+      fetchAllPosts: "posts/fetchAllPosts"
     })
   },
-  computed: mapGetters({
-          posts: 'posts/allPosts'
-  }),
+  computed: {
+    ...mapGetters({
+      posts: "posts/allPosts"
+    })
+  },
   created() {
-    this.fetchAllPosts()
+    this.fetchAllPosts();
   }
 };
 </script>
