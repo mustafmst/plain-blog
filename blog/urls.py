@@ -18,6 +18,9 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
 
+
+admin.site.site_header = 'Simple-Blog Admin'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/blog/', include('blogging_api.urls')),
