@@ -1,17 +1,33 @@
-from django.http import JsonResponse, HttpResponse
-from django.views.decorators.http import require_GET
+import logging
 
-from blogging_api.models.post import Post
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
+
+from blogging_api.models.post import Post, PostSerializer
 
 
-@require_GET
+@api_view(['GET'])
 def all_posts(request):
-    posts = [p.get_short_json() for p in Post.objects.all()]
-    posts.sort(key=lambda x: x['publication_date'], reverse=True)
-    return JsonResponse(posts, safe=False)
+    """
+    Get all blog posts
+    :param request:
+    :return: all blog posts in json format
+    """
+    posts = Post.objects.all()
+    serializer = PostSerializer(posts, many=True)
+    logging.debug(posts)
+    logging.debug(serializer.data)
+    return Response(serializer.data)
 
 
-@require_GET
+@api_view(['GET'])
 def get_post(request, id):
-    post = Post.objects.get(pk=id).get_json()
-    return JsonResponse(post, safe=False)
+    """
+    Get single blog post
+    :param request:
+    :param id: id of a blog post
+    :return: blog post in json format
+    """
+    post = Post.objects.get(pk=id)
+    serializer = PostSerializer(post, many=False)
+    return Response(serializer.data)

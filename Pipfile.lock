@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "922661ef42d02b43f8a14f8146744068220124990cb08b15320ae1d1bac45f3a"
+            "sha256": "e62c716759e9228f564b39dc1567a0b69fb16ddf2bfc1f87a42a7f2b89728125"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -30,6 +30,28 @@
             ],
             "index": "pypi",
             "version": "==3.0.3"
+        },
+        "djangorestframework": {
+            "hashes": [
+                "sha256:05809fc66e1c997fd9a32ea5730d9f4ba28b109b9da71fccfa5ff241201fd0a4",
+                "sha256:e782087823c47a26826ee5b6fa0c542968219263fb3976ec3c31edab23a4001f"
+            ],
+            "index": "pypi",
+            "version": "==3.11.0"
+        },
+        "docutils": {
+            "hashes": [
+                "sha256:0c5b78adfbf7762415433f5515cd5c9e762339e23369dbe8000d84a4bf4ab3af",
+                "sha256:c2de3a60e9e7d07be26b7f2b00ca0309c207e06c100f9cc2a94931fc75a478fc"
+            ],
+            "index": "pypi",
+            "version": "==0.16"
+        },
+        "future": {
+            "hashes": [
+                "sha256:b1bead90b70cf6ec3f0710ae53a525360fa360d306a86583adc6bf83a4db537d"
+            ],
+            "version": "==0.18.2"
         },
         "psycopg2-binary": {
             "hashes": [
@@ -71,11 +93,11 @@
         },
         "python-dotenv": {
             "hashes": [
-                "sha256:440c7c23d53b7d352f9c94d6f70860242c2f071cf5c029dd661ccb22d64ae42b",
-                "sha256:f254bfd0c970d64ccbb6c9ebef3667ab301a71473569c991253a481f1c98dddc"
+                "sha256:8429f459fc041237d98c9ff32e1938e7e5535b5ff24388876315a098027c3a57",
+                "sha256:ca9f3debf2262170d6f46571ce4d6ca1add60bb93b69c3a29dcb3d1a00a65c93"
             ],
             "index": "pypi",
-            "version": "==0.10.5"
+            "version": "==0.11.0"
         },
         "pytz": {
             "hashes": [
@@ -83,6 +105,13 @@
                 "sha256:b02c06db6cf09c12dd25137e563b31700d3b80fcc4ad23abb7a315f2789819be"
             ],
             "version": "==2019.3"
+        },
+        "serializers": {
+            "hashes": [
+                "sha256:fe58212826290e6c1a52c289bcc431f74a196e1fb8a797ce43034c7d0aa0287f"
+            ],
+            "index": "pypi",
+            "version": "==0.2.4"
         },
         "sqlparse": {
             "hashes": [

@@ -18,12 +18,16 @@ const actions = {
     async fetchPost({commit}, postId) {
         const res = await Axios.get(`/api/blog/posts/${postId}`)
         commit('setCurrentPost', res.data)
+    },
+    clearCurrentPost({commit}) {
+        commit('clearCurrentPost')
     }
 }
 
 const mutations = {
     setPosts: (state, posts) => (state.posts = [...posts]),
-    setCurrentPost: (state, post) => (state.currentPost = {...post})
+    setCurrentPost: (state, post) => (state.currentPost = {...post}),
+    clearCurrentPost: (state) => (state.currentPost = null)
 }
 
 export default { namespaced: true, state, getters, actions, mutations }

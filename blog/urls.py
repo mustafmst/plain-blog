@@ -19,10 +19,11 @@ from django.urls import path, include
 from django.views.generic import TemplateView
 
 
-admin.site.site_header = 'Simple-Blog Admin'
+admin.site.site_header = 'Plain-Blog Admin'
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('admin/doc/', include('django.contrib.admindocs.urls')),
     path('api/blog/', include('blogging_api.urls')),
     url(r'^$', TemplateView.as_view(template_name='index.html')),
 ]

@@ -36,6 +36,8 @@ ALLOWED_HOSTS = [host.strip() for host in environ.get('ALLOWED_HOSTS', '').split
 # Application definition
 
 INSTALLED_APPS = [
+    'django.contrib.admindocs',
+    'rest_framework',
     'blogging_api.apps.BloggingApiConfig',
     'django.contrib.admin',
     'django.contrib.auth',

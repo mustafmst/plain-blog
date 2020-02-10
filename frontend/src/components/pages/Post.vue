@@ -15,7 +15,8 @@ export default {
   name: "Post",
   methods: {
     ...mapActions({
-      getPost: "posts/fetchPost"
+      getPost: "posts/fetchPost",
+      clearPost: "posts/clearCurrentPost"
     })
   },
   computed: {
@@ -30,8 +31,13 @@ export default {
     this.getPost(this.$route.params.id);
   },
   beforeRouteUpdate(to, from, next) {
-    this.getPost(to.params.id);
+    this.clearPost();
+    if(to.params.id !== undefined || to.params.id !== null)
+      this.getPost(to.params.id);
     next();
+  },
+  destroyed() {
+    this.clearPost();
   }
 };
 </script>
