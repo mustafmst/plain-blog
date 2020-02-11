@@ -25,13 +25,4 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../../style/colors.scss';
-
-a {
-  color:inherit;
-  text-decoration: none;
-  &:hover {
-      color: $font-accent-color;
-  }
- }
 </style>

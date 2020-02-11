@@ -24,13 +24,4 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../../style/colors.scss';
-
-.posts-list {
-    li {
-        list-style-type: none;
-        border-bottom: $blue-gray-600 solid 1px;
-        padding-top: 3em;
-    }
-}
 </style>
