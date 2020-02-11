@@ -1,7 +1,7 @@
 <template>
-  <div id="app" class="pure-g">
+  <div id="app" class="">
     <Header></Header>
-    <div class="content pure-u-1 pure-u-lg-3-4">
+    <div class="container">
       <router-view></router-view>
     </div>
   </div>
