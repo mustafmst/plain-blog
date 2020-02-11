@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <h1>Blog Page</h1>
+  <div class="">
     <PostsList v-bind:posts="posts"></PostsList>
   </div>
 </template>

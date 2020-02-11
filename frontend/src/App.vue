@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="">
     <Header></Header>
-    <div class="container">
+    <div class="container page-content">
       <router-view></router-view>
     </div>
   </div>
@@ -28,5 +28,9 @@ body {
   font-family: "lato";
   background-color: $background-main-color;
   color: $font-normal-color;
+
+  .page-content {
+    margin-top: 3em;
+  }
 }
 </style>
