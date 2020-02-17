@@ -13,7 +13,7 @@ def all_posts(request):
     :param request:
     :return: all blog posts in json format
     """
-    posts = Post.objects.all()
+    posts = Post.objects.filter(published=True)
     serializer = PostSerializer(posts, many=True)
     logging.debug(posts)
     logging.debug(serializer.data)

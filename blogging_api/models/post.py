@@ -8,10 +8,11 @@ class Post(models.Model):
     """
     Stores single blog post. Content preferably in markdown.
     """
-    title = models.CharField(max_length=300)
+    title = models.CharField(max_length=150)
     publication_date = models.DateField('published')
     content = models.TextField()
-    content_short = models.TextField(default='')
+    content_short = models.TextField(default='', max_length=500)
+    published = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title
