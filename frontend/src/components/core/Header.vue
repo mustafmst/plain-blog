@@ -1,16 +1,32 @@
 <template>
-  <div class="header-container pure-u-1 pure-u-lg-1-4">
-    <div class="pure-menu menu">
-      <ul class="pure-menu-list">
-        <li class="pure-menu-item"><router-link to="/" class="pure-menu-heading pure-menu-link">/home/PawełMstowski</router-link></li>
-        <MenuItem v-for="item in menuItems" v-bind:to="item.to" v-bind:title="item.title" v-bind:key="item.id"></MenuItem>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <router-link to="/" class="navbar-brand">/home/PawełMstowski</router-link>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <MenuItem
+          v-for="item in menuItems"
+          v-bind:to="item.to"
+          v-bind:title="item.title"
+          v-bind:key="item.id"
+        ></MenuItem>
       </ul>
     </div>
-  <div>
+  </nav>
 </template>
 
 <script>
-import MenuItem from './menu/MenuItem'
+import MenuItem from "./menu/MenuItem";
 
 export default {
   name: "Header",
@@ -29,50 +45,16 @@ export default {
           id: 1,
           title: "Info",
           to: "/info"
-        },
+        }
       ]
-    }
+    };
   }
-}
+};
 </script>
 
 <style lang='scss'>
 @import "../../style/colors.scss";
-
-@media(min-width: 64em){
-  .header-container {
-    position: fixed;
-    border-right: solid 1px $accent-color;
-  }
-  .menu {
-    margin-top: 15em;
-  }
-}
-
-.header-container {
-  height: 100%;
-  text-align: right;
-}
-
-
-.menu {
-  .pure-menu-link {
-    color: $font-normal-color;
-    &:hover{
-      background-color: $accent-color;
-    }
-  }
-  .router-link-exact-active {
-    background-color: $background-main-color;
-    color: $font-accent-color;
-    &:after{
-      content: " $"
-    }
-  }
-}
-
-.blog-header {
-  border-right: solid 1px #ddd;
-  height: 100%;
+.navbar{
+  background-color: $accent-color;
 }
 </style>

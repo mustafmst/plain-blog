@@ -1,5 +1,5 @@
 <template>
-  <li class="pure-menu-item"><router-link v-bind:to="to" class="pure-menu-link">~/{{title}}</router-link></li>
+  <li class="nav-item"><router-link v-bind:to="to" class="nav-link">~/{{title}}</router-link></li>
 </template>
 
 <script>
