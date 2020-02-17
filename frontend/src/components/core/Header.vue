@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <router-link to="/" class="navbar-brand">/home/PawełMstowski</router-link>
     <button
       class="navbar-toggler"
@@ -53,4 +53,8 @@ export default {
 </script>
 
 <style lang='scss'>
+@import "../../style/colors.scss";
+.navbar{
+  background-color: $accent-color;
+}
 </style>

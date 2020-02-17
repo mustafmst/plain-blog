@@ -29,6 +29,7 @@ export default {
 <style lang="scss">
 @import "../../../style/colors.scss";
 
+
 .posts-list-item {
     height: 100%;
   a {
@@ -36,18 +37,21 @@ export default {
     text-decoration: none;
   }
   margin-bottom: 1em;
-  $shadow-color: $blue-A400;
-  $shadow-move: 1em;
+  $shadow-move: 0.5em;
   .card {
-      display: flex;
+    position: relative;
+    background-color: $accent-color;
+    display: flex;
     box-shadow: 0em 0em 0em $shadow-color;
-    transition: box-shadow 0.3s;
+    transition: box-shadow 0.4s, top 2s, left 2s;
     &:hover {
       box-shadow: $shadow-move $shadow-move $shadow-move $shadow-color;
+      top: -$shadow-move;
+      left: -$shadow-move;
     }
   }
   .card-body {
-    // height: 26em;
+    height: 26em;
   }
 
   .post-card-date {

@@ -5,6 +5,7 @@
   "author": "Paweł Mstowski <pawel.mstowski@gmail.com>",
   "private": true,
   "scripts": {
+    "dev": "node dev-proxy-server.js",
     "watch": "parcel watch src/main.js -d ../dist/static",
     "production": "parcel build src/main.js -d ../dist/static"
   },
