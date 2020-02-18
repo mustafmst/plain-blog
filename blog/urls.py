@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from django.contrib.staticfiles.views import serve
 from django.urls import path, include
-from django.views.generic import TemplateView
-
+from django.views.generic import TemplateView, RedirectView
 
 admin.site.site_header = 'Plain-Blog Admin'
 
@@ -25,5 +25,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('admin/doc/', include('django.contrib.admindocs.urls')),
     path('api/blog/', include('blogging_api.urls')),
-    url(r'^$', TemplateView.as_view(template_name='index.html')),
+
+    # / routes to index.html
+    url(r'^$', serve,
+        kwargs={'path': 'index.html'}),
+    # static files (*.css, *.js, *.jpg etc.) served on /
+    url(r'^(?!/static/.*)(?P<path>.*\..*)$',
+        RedirectView.as_view(url='/static/%(path)s')),
 ]

@@ -12,6 +12,7 @@ python-dotenv = "*"
 djangorestframework = "*"
 serializers = "*"
 docutils = "*"
+django-ckeditor = "*"
 
 [requires]
 python_version = "3.8"

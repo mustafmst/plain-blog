@@ -1,5 +1,6 @@
 from datetime import timezone, timedelta
 
+from ckeditor.fields import RichTextField
 from rest_framework import serializers
 from django.db import models
 
@@ -10,7 +11,7 @@ class Post(models.Model):
     """
     title = models.CharField(max_length=150)
     publication_date = models.DateField('published')
-    content = models.TextField()
+    content = RichTextField()
     content_short = models.TextField(default='', max_length=500)
     published = models.BooleanField(default=False)
 

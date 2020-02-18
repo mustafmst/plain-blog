@@ -1,6 +1,8 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-    <router-link to="/" class="navbar-brand">/home/PawełMstowski</router-link>
+    <router-link to="/" class="navbar-brand">
+      <img src="../../../static/nav-logo.png" >
+    </router-link>
     <button
       class="navbar-toggler"
       type="button"
