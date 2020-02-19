@@ -1,7 +1,8 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <router-link to="/" class="navbar-brand">
-      <img src="../../../static/nav-logo.png" >
+      <img src="../../../static/nav-logo.png" height="60px" >
+      Trochę o kodzie
     </router-link>
     <button
       class="navbar-toggler"
@@ -58,5 +59,15 @@ export default {
 @import "../../style/colors.scss";
 .navbar{
   background-color: $accent-color;
+  .navbar-brand{
+    color: $font-accent-color;
+    transition: color 0.5s;
+    &:hover{
+      color: $font-hover-color;
+    }
+    &:focus{
+      color: $font-accent-color;
+    }
+  }
 }
 </style>

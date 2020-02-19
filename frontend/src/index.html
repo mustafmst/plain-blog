@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Blog</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="app"></div>
-    <script src="main.js"></script>
-  </body>
+
+<head>
+  <link rel="shortcut icon" href="../static/favicon.png" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+  <meta charset="utf-8">
+  <title>BitCode | Trochę o kodzie</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="app"></div>
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+  <script>
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#3937a3"
+      },
+      "button": {
+        "background": "#e62576"
+      }
+    },
+    "theme": "classic",
+    "position": "bottom-right"
+  });
+  </script>
+</body>
 </html>

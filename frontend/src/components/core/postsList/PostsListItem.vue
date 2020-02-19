@@ -1,5 +1,5 @@
 <template>
-  <div class="posts-list-item col mb-4">
+  <div class="posts-list-item col-12">
     <router-link v-bind:to="postLink">
       <div class="card h-100">
         <div class="card-body">
@@ -42,16 +42,13 @@ export default {
     position: relative;
     background-color: $accent-color;
     display: flex;
-    box-shadow: 0em 0em 0em $shadow-color;
-    transition: box-shadow 0.4s, top 2s, left 2s;
+    transition: opacity 0.4s;
     &:hover {
-      box-shadow: $shadow-move $shadow-move $shadow-move $shadow-color;
-      top: -$shadow-move;
-      left: -$shadow-move;
+      opacity: 0.7;
     }
   }
   .card-body {
-    height: 26em;
+    height: 18em;
   }
 
   .post-card-date {

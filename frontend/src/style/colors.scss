@@ -27,8 +27,12 @@ $blue-A200: #448AFF;
 $blue-A400: #2979FF;
 $blue-A700: #2962FF;
 
+$logo-color-first: #3003bfff;
+$logo-color-second: #d400aaff;
+
 $background-main-color: $blue-gray-800;
-$accent-color: $blue-gray-700;
+$accent-color: $blue-gray-900;
 $font-normal-color: $blue-gray-200;
-$font-accent-color: $blue-600;
+$font-accent-color: $logo-color-second;
+$font-hover-color: $blue-600;
 $shadow-color: $blue-gray-900;
