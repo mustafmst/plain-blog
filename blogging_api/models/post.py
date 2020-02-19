@@ -4,6 +4,8 @@ from ckeditor.fields import RichTextField
 from rest_framework import serializers
 from django.db import models
 
+from blogging_api.models.tag import Tag
+
 
 class Post(models.Model):
     """
@@ -14,6 +16,8 @@ class Post(models.Model):
     content = RichTextField()
     content_short = models.TextField(default='', max_length=500)
     published = models.BooleanField(default=False)
+    pinned_to_main_page = models.BooleanField(default=False)
+    tags = models.ManyToManyField(Tag)
 
     def __str__(self):
         return self.title
@@ -31,6 +35,7 @@ class PostSerializer(serializers.Serializer):
     publication_date = serializers.DateField()
     content = serializers.CharField()
     content_short = serializers.CharField()
+    tags = serializers.SlugRelatedField(many=True, read_only=True, slug_field='name')
 
     def create(self, validated_data):
         return Post.objects.create(**validated_data)
