@@ -46,7 +46,7 @@ export default {
         },
         {
           id: 1,
-          title: "Info",
+          title: "Kontakt",
           to: "/info"
         }
       ]

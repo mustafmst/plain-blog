@@ -31,3 +31,30 @@ def get_post(request, id):
     post = Post.objects.get(pk=id)
     serializer = PostSerializer(post, many=False)
     return Response(serializer.data)
+
+
+@api_view(['GET'])
+def get_homepage_content(request):
+    """
+    Get all content for the homepage
+    :param request:
+    :return:
+    """
+    homepage = Post.objects.get(homepage_content=True)
+    pinned = Post.objects.filter(pinned_to_main_page=True)
+    return Response({
+        'homepage': PostSerializer(homepage, many=False).data,
+        'pinned': PostSerializer(pinned, many=True).data
+    })
+
+
+@api_view(['GET'])
+def get_infopage_content(request):
+    """
+    Get all content for infopage
+    :param request:
+    :return:
+    """
+    infopage = Post.objects.get(infopage_content=True)
+    return Response(PostSerializer(infopage, many=False).data)
+

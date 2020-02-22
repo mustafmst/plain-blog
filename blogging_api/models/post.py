@@ -17,6 +17,8 @@ class Post(models.Model):
     content_short = models.TextField(default='', max_length=500)
     published = models.BooleanField(default=False)
     pinned_to_main_page = models.BooleanField(default=False)
+    homepage_content = models.BooleanField(default=False)
+    infopage_content = models.BooleanField(default=False)
     tags = models.ManyToManyField(Tag)
 
     def __str__(self):

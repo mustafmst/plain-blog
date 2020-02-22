@@ -2,7 +2,7 @@
   <div>
     <div v-if="post != null">
       <h1>{{post.title}}</h1>
-      <div class="" v-html="compiledContent"></div>
+      <div v-html="compiledContent"></div>
     </div>
   </div>
 </template>
