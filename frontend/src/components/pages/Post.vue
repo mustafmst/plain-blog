@@ -3,6 +3,7 @@
     <div v-if="post != null">
       <h1>{{post.title}}</h1>
       <div v-html="compiledContent"></div>
+      <Comments></Comments>
     </div>
   </div>
 </template>
@@ -10,9 +11,18 @@
 <script>
 import { mapActions, mapGetters } from "vuex";
 import marked from "marked";
+import Comments from "./../core/comments/Comments";
 
 export default {
   name: "Post",
+  components: {
+    Comments
+  },
+  data: function() {
+    return {
+      postId: this.$route.params.id
+    };
+  },
   methods: {
     ...mapActions({
       getPost: "posts/fetchPost",
@@ -32,8 +42,10 @@ export default {
   },
   beforeRouteUpdate(to, from, next) {
     this.clearPost();
-    if(to.params.id !== undefined || to.params.id !== null)
+    if (to.params.id !== undefined || to.params.id !== null) {
+      this.postId = to.params.id;
       this.getPost(to.params.id);
+    }
     next();
   },
   destroyed() {
