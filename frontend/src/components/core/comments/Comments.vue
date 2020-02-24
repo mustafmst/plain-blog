@@ -12,6 +12,11 @@ export default {
   name: 'Comments',
   components:{
     CommentForm
+  },
+  props: [
+    "forPost"
+  ],
+  created(){
   }
 }
 </script>

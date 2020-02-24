@@ -19,13 +19,11 @@ export default {
   name: "CommentForm",
   data: function() {
     return {
-      author: null,
-      comment: null
+      author: "",
+      comment: ""
     };
   },
   created() {
-    author = null;
-    comment = null;
   },
   methods: {
     sendComment(){

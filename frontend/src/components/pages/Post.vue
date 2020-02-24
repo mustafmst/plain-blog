@@ -3,7 +3,7 @@
     <div v-if="post != null">
       <h1>{{post.title}}</h1>
       <div v-html="compiledContent"></div>
-      <Comments></Comments>
+      <Comments v-bind:forPost="postId"></Comments>
     </div>
   </div>
 </template>
