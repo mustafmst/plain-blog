@@ -35,7 +35,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "cssnano": "^4.1.10",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "http-proxy-middleware": "^0.20.0",
     "parcel-bundler": "^1.12.4",
     "parcel-proxy-server": "^1.1.0",
